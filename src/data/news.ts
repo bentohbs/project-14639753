@@ -33,3 +33,4 @@ export const news: NewsItem[] = [
     published: false,
   },
 ];
+
