@@ -6,8 +6,12 @@ import type { FormEvent } from 'react';
 // the VITE_FORM_ENDPOINT setting (see WIRING.md). If it is not set, the form
 // falls back to opening an email to VITE_CONTACT_EMAIL.
 
-const ENDPOINT = import.meta.env.VITE_FORM_ENDPOINT as string | undefined;
-const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL as string | undefined;
+const ENDPOINT =
+  (import.meta.env.VITE_FORM_ENDPOINT as string | undefined) ||
+  'https://formspree.io/f/xyekparb';
+const CONTACT_EMAIL =
+  (import.meta.env.VITE_CONTACT_EMAIL as string | undefined) ||
+  'info@gaudient.com';
 
 const PRODUCT_OPTIONS = [
   'Radio / wireless (Wi-Fi, Bluetooth, etc.)',
