@@ -48,7 +48,11 @@ export default function QuoteForm({
     // Hidden trap field: real people leave it empty, spam bots fill it in.
     if (data.get('website')) return;
 
-    data.append('page', window.location.pathname);
+        data.append('page', window.location.pathname);
+
+    // Formspree uses a field named _subject as the email subject line.
+    const subject = `Quote request: ${data.get('markets') || 'new enquiry'} (${data.get('company') || 'no company given'})`;
+    data.append('_subject', subject);
 
     if (!ENDPOINT) {
       if (CONTACT_EMAIL) {
