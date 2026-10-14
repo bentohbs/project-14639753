@@ -40,6 +40,24 @@ export default function CountryPage() {
           ? `. Last verified on ${country.lastVerified}.`
           : ''}
       </p>
+            {country.partnerName ? (
+        <p className="mt-1 text-sm text-foreground-800">
+          In partnership with{' '}
+          {country.partnerUrl ? (
+            <a
+              href={country.partnerUrl}
+              className="text-primary-500 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {country.partnerName}
+            </a>
+          ) : (
+            country.partnerName
+          )}
+          .
+        </p>
+      ) : null}
 
       <section className="mt-12" aria-labelledby="key-points">
         <h2 id="key-points" className="text-2xl font-semibold">
