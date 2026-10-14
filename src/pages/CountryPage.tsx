@@ -55,6 +55,11 @@ export default function CountryPage() {
         </dl>
       </section>
 
+      <p className="mt-8 text-sm text-foreground-800">
+        Requirements change and depend on the product. We confirm the current rules for your
+        product before we quote.
+      </p>
+
       <section className="mt-12" aria-labelledby="how-it-works">
         <h2 id="how-it-works" className="text-2xl font-semibold">
           How we handle it
