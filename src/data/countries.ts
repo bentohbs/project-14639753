@@ -24,6 +24,8 @@ export interface Country {
   process: string[];
   status: CountryStatus;
   lastVerified?: string;
+  partnerName?: string; // optional: shown as "In partnership with ..."
+  partnerUrl?: string; // optional: link for the partner name
 }
 
 export const countries: Country[] = [
@@ -75,7 +77,61 @@ export const countries: Country[] = [
     lastVerified: '2026-10-14',
   },
 
-  // To add Brazil, South Africa and others, copy the block above and edit it.
+  {
+    slug: 'brazil',
+    name: 'Brazil',
+    region: 'Latin America',
+    regulator: 'Anatel (radio and telecom) and INMETRO (safety)',
+    headline: 'Radio and safety approval for Brazil',
+    metaDescription:
+      'Type approval for Brazil: Anatel homologation for Wi-Fi, Bluetooth and other radio products, plus INMETRO safety certification, handled with local partners.',
+    intro:
+      'Any product that sends or receives data by radio, including Wi-Fi and Bluetooth, needs Anatel homologation before it can be sold in Brazil. Some electrical products also need INMETRO safety certification. We manage both with our local partners, so you deal with one team.',
+    keyPoints: [
+      {
+        title: 'Anatel homologation is mandatory',
+        body: 'Telecommunications products sold or used in Brazil need a Certificate of Conformity from a Designated Certification Body (OCD). Anatel then approves it and issues the homologation. This covers products using Wi-Fi, Bluetooth, LTE, 5G and other radio technologies.',
+      },
+      {
+        title: 'A local representative is required',
+        body: 'Foreign manufacturers cannot apply directly. The application must go through a Brazilian company with a CNPJ, which holds the certificate and is responsible for supply and warranty in Brazil. Applications are made in Portuguese.',
+      },
+      {
+        title: 'Testing is done in Brazil',
+        body: 'Testing is carried out at an accredited Brazilian laboratory, and foreign test reports are generally not enough on their own. For wireless products, Anatel testing covers radio performance and EMC. The OCD advises which tests apply to your product.',
+      },
+      {
+        title: 'New filing system: Certifica',
+        body: 'On 8 September 2026 Anatel moved certification and homologation to a new platform called Certifica, which replaced the old SCH system. The rules themselves did not change, but the local representative now has to be registered in Anatel\u2019s SEI system and authorise the certification body to act for it. A signed product warranty declaration and a digital signature from the local applicant are also being required.',
+      },
+      {
+        title: 'Wi-Fi band rules',
+        body: 'Wi-Fi in the 5 GHz band has to meet dynamic frequency selection (DFS) requirements. In 2026 Anatel also narrowed the 6 GHz range allowed for Wi-Fi devices, so 6 GHz products need checking against the current rules.',
+      },
+      {
+        title: 'Validity and renewal',
+        body: 'Radio certificates are time-limited, commonly 24 months, and need renewing. Approval typically takes from about ten weeks to eighteen months, depending on the product and the testing involved.',
+      },
+      {
+        title: 'Safety certification (INMETRO)',
+        body: 'Products on Brazil\u2019s compulsory safety lists need certification from an INMETRO-accredited body and carry the INMETRO mark. Anatel also applies its own safety seal to lithium batteries and chargers used with mobile phones. Which rules apply depends on the product.',
+      },
+    ],
+    process: [
+      'Tell us about your product and the markets you plan to sell in.',
+      'We confirm which approvals apply and send you a scope and quote.',
+      'Your Brazilian local representative is set up and registered with Anatel.',
+      'Testing is arranged at an accredited laboratory in Brazil.',
+      'The certification body issues the Certificate of Conformity, and INMETRO certification where it applies.',
+      'Anatel approves the homologation, and you receive the certificates and labelling guidance.',
+    ],
+    status: 'verified',
+    lastVerified: '2026-10-14',
+    partnerName: 'Bracert',
+    partnerUrl: 'https://www.bracert.com.br/',
+  },
+
+  // To add South Africa and others, copy a block above and edit it.
 ];
 
 export function findCountry(slug: string | undefined): Country | undefined {
