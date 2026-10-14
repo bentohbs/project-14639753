@@ -131,7 +131,59 @@ export const countries: Country[] = [
     partnerUrl: 'https://www.bracert.com.br/',
   },
 
-  // To add South Africa and others, copy a block above and edit it.
+  {
+    slug: 'south-africa',
+    name: 'South Africa',
+    region: 'Africa',
+    regulator: 'ICASA (radio and telecom) and NRCS (electrical safety)',
+    headline: 'Radio and safety approval for South Africa',
+    metaDescription:
+      'Type approval for South Africa: ICASA approval for Wi-Fi, Bluetooth and other radio products, plus NRCS electrical safety, handled with local partners.',
+    intro:
+      'Radio and telecom equipment, including Wi-Fi and Bluetooth products, needs ICASA type approval before it can be imported or sold in South Africa. Electrical products also need NRCS safety approval. We manage both with our local partners, so you deal with one team.',
+    keyPoints: [
+      {
+        title: 'ICASA type approval is mandatory',
+        body: 'Radio and telecom equipment needs type approval from the Independent Communications Authority of South Africa (ICASA) before it is imported, sold or used. Wi-Fi and Bluetooth devices are included.',
+      },
+      {
+        title: 'A local representative is required',
+        body: 'Applications are submitted by a representative in South Africa, and the certificate is issued in the name of that local representative or registered company.',
+      },
+      {
+        title: 'Test reports and samples',
+        body: 'ICASA generally bases approval on test reports against the relevant EN standards from an accredited laboratory, covering radio performance, EMC and safety, so separate testing in South Africa is generally not needed. A sample may still be requested.',
+      },
+      {
+        title: 'Application system and timing',
+        body: 'Applications go through ICASA\u2019s Automated Spectrum Management System (ASMS). When it runs normally, radio approval typically takes about five to ten weeks. Technical problems in mid-2026 caused a backlog and longer processing times, so we check the current position before we quote.',
+      },
+      {
+        title: 'Approval routes and validity',
+        body: 'Equipment already on ICASA\u2019s type-approved register can use a simplified process. Certificates are generally valid indefinitely. The product or its documentation carries the ICASA label.',
+      },
+      {
+        title: 'Electrical safety (NRCS)',
+        body: 'Electrical products need a Letter of Authority (LoA) from the National Regulator for Compulsory Specifications (NRCS). It is applied for through a South African agent and is usually needed before customs clearance. A CB test report less than three years old, together with safety test reports, is typically required. The SABS mark is optional.',
+      },
+      {
+        title: 'EMC for other electronics',
+        body: 'For radio products, ICASA covers radio and EMC requirements. Other electronic and electrical products entering South Africa may need a SABS EMC certificate of conformity.',
+      },
+    ],
+    process: [
+      'Tell us about your product and the markets you plan to sell in.',
+      'We confirm which approvals apply and send you a scope and quote.',
+      'We arrange the test reports, and a local representative is appointed.',
+      'The representative applies to ICASA for type approval, and to the NRCS for the Letter of Authority where it applies.',
+      'ICASA reviews the application and issues the type approval certificate.',
+      'You receive the certificates and ICASA labelling guidance.',
+    ],
+    status: 'verified',
+    lastVerified: '2026-10-14',
+  },
+
+  // To add another country, copy a block above and edit it.
 ];
 
 export function findCountry(slug: string | undefined): Country | undefined {
