@@ -7,6 +7,7 @@ export type RouteSeo = {
   indexable: boolean;
   sitemapInclude: boolean;
   ogType?: string;
+  zh?: { title: string; description: string }; // Simplified Chinese version
 };
 
 // One entry per country page, built from src/data/countries.ts.
@@ -21,6 +22,10 @@ const countrySeo: Record<string, RouteSeo> = Object.fromEntries(
       indexable: c.status === 'verified',
       sitemapInclude: c.status === 'verified',
       ogType: 'website',
+      zh:
+        c.zh?.name && c.zh?.metaDescription
+          ? { title: `${c.zh.name}型式批准与认证 | GaudiEnt`, description: c.zh.metaDescription }
+          : undefined,
     } satisfies RouteSeo,
   ]),
 );
@@ -34,6 +39,10 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     indexable: true,
     sitemapInclude: true,
     ogType: 'website',
+    zh: {
+      title: 'GaudiEnt 全球型式批准与法规合规',
+      description: 'GaudiEnt 为制造商、实验室和机构提供覆盖 180 多个国家的全球型式批准、法规合规和产品认证服务。',
+    },
   },
   '/countries': {
     title: 'Countries We Cover | GaudiEnt Type Approval',
@@ -43,6 +52,10 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     indexable: true,
     sitemapInclude: true,
     ogType: 'website',
+    zh: {
+      title: '我们覆盖的国家 | GaudiEnt 型式批准',
+      description: '与各市场本地合作伙伴共同办理无线电、EMC 和安全认证。查看我们覆盖国家的具体要求。',
+    },
   },
   '/news': {
     title: 'Regulatory Updates | GaudiEnt',
@@ -52,6 +65,10 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     indexable: true,
     sitemapInclude: true,
     ogType: 'website',
+    zh: {
+      title: '法规动态 | GaudiEnt',
+      description: '我们所覆盖市场的型式批准和认证规则变化，及其对您产品的影响。',
+    },
   },
   ...countrySeo,
 };

@@ -1,31 +1,28 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import PageShell from '../components/PageShell';
 import QuoteForm from '../components/QuoteForm';
-import { findCountry } from '../data/countries';
-import { news } from '../data/news';
+import { findCountry, getCountryText } from '../data/countries';
+import { getNewsText, news } from '../data/news';
 
 export default function NewsPage() {
+  const { t, i18n } = useTranslation();
   const items = news
     .filter((n) => n.published)
     .sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <PageShell>
-      <h1 className="text-3xl font-semibold leading-tight">Regulatory updates</h1>
-      <p className="mt-4 text-lg leading-relaxed text-foreground-800">
-        Changes to approval rules in the markets we cover, with what they mean for your
-        products.
-      </p>
+      <h1 className="text-3xl font-semibold leading-tight">{t('news.title')}</h1>
+      <p className="mt-4 text-lg leading-relaxed text-foreground-800">{t('news.intro')}</p>
 
       {items.length === 0 ? (
-        <p className="mt-10 text-foreground-800">
-          No updates yet. Use the form below and we will tell you when something changes in
-          your markets.
-        </p>
+        <p className="mt-10 text-foreground-800">{t('news.empty')}</p>
       ) : (
         <ul className="mt-10 space-y-10">
           {items.map((n) => {
             const country = findCountry(n.country);
+            const text = getNewsText(n, i18n.language);
             return (
               <li key={n.slug} id={n.slug}>
                 <p className="text-sm text-foreground-800">
@@ -34,20 +31,20 @@ export default function NewsPage() {
                     <>
                       {' '}
                       <Link to={`/countries/${country.slug}`} className="text-primary-500 underline">
-                        {country.name}
+                        {getCountryText(country, i18n.language).name}
                       </Link>
                     </>
                   ) : null}
                 </p>
-                <h2 className="mt-1 text-xl font-semibold">{n.title}</h2>
-                <p className="mt-2 leading-relaxed text-foreground-800">{n.summary}</p>
+                <h2 className="mt-1 text-xl font-semibold">{text.title}</h2>
+                <p className="mt-2 leading-relaxed text-foreground-800">{text.summary}</p>
                 <p className="mt-2 leading-relaxed text-foreground-800">
-                  <strong className="text-foreground-950">What to do:</strong> {n.whatToDo}
+                  <strong className="text-foreground-950">{t('news.whatToDo')}</strong> {text.whatToDo}
                 </p>
                 {n.sourceUrl ? (
                   <p className="mt-2 text-sm">
                     <a href={n.sourceUrl} className="text-primary-500 underline" rel="noopener noreferrer">
-                      Read the regulator&rsquo;s announcement
+                      {t('news.source')}
                     </a>
                   </p>
                 ) : null}
@@ -58,10 +55,7 @@ export default function NewsPage() {
       )}
 
       <section className="mt-14 border-t border-background-300 pt-10">
-        <QuoteForm
-          title="Does an update affect your product?"
-          intro="Send us the model and the countries. We will tell you what applies, free of charge."
-        />
+        <QuoteForm title={t('news.formTitle')} intro={t('news.formIntro')} />
       </section>
     </PageShell>
   );

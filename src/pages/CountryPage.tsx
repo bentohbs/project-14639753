@@ -1,48 +1,52 @@
 import { Link, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import PageShell from '../components/PageShell';
 import QuoteForm from '../components/QuoteForm';
-import { findCountry } from '../data/countries';
+import { findCountry, getCountryText } from '../data/countries';
 
 // One page layout used for every country: /countries/mexico, /countries/brazil, ...
 // The page title and description for Google come from src/seo/config.ts.
 
 export default function CountryPage() {
   const { slug } = useParams();
+  const { t, i18n } = useTranslation();
   const country = findCountry(slug);
 
   if (!country) {
     return (
       <PageShell>
-        <h1 className="text-2xl font-semibold">We could not find that country</h1>
+        <h1 className="text-2xl font-semibold">{t('country.notFound')}</h1>
         <p className="mt-2">
           <Link to="/countries" className="text-primary-500 underline">
-            See the countries we cover
+            {t('country.seeAll')}
           </Link>
         </p>
       </PageShell>
     );
   }
 
+  const text = getCountryText(country, i18n.language);
+
   return (
     <PageShell>
       <p className="text-sm text-foreground-800">
         <Link to="/countries" className="text-primary-500 underline">
-          Countries
+          {t('country.breadcrumb')}
         </Link>{' '}
-        / {country.name}
+        / {text.name}
       </p>
 
-      <h1 className="mt-3 text-3xl font-semibold leading-tight">{country.headline}</h1>
-      <p className="mt-4 text-lg leading-relaxed text-foreground-800">{country.intro}</p>
+      <h1 className="mt-3 text-3xl font-semibold leading-tight">{text.headline}</h1>
+      <p className="mt-4 text-lg leading-relaxed text-foreground-800">{text.intro}</p>
       <p className="mt-3 text-sm text-foreground-800">
-        Authority: {country.regulator}
+        {t('country.authority')} {text.regulator}
         {country.status === 'verified' && country.lastVerified
-          ? `. Last verified on ${country.lastVerified}.`
+          ? ` ${t('country.verified', { date: country.lastVerified })}`
           : ''}
       </p>
-            {country.partnerName ? (
+      {country.partnerName ? (
         <p className="mt-1 text-sm text-foreground-800">
-          In partnership with{' '}
+          {t('country.partner')}{' '}
           {country.partnerUrl ? (
             <a
               href={country.partnerUrl}
@@ -61,10 +65,10 @@ export default function CountryPage() {
 
       <section className="mt-12" aria-labelledby="key-points">
         <h2 id="key-points" className="text-2xl font-semibold">
-          What you need to know
+          {t('country.keyPoints')}
         </h2>
         <dl className="mt-6 space-y-6">
-          {country.keyPoints.map((p) => (
+          {text.keyPoints.map((p) => (
             <div key={p.title}>
               <dt className="font-semibold">{p.title}</dt>
               <dd className="mt-1 leading-relaxed text-foreground-800">{p.body}</dd>
@@ -73,17 +77,14 @@ export default function CountryPage() {
         </dl>
       </section>
 
-      <p className="mt-8 text-sm text-foreground-800">
-        Requirements change and depend on the product. We confirm the current rules for your
-        product before we quote.
-      </p>
+      <p className="mt-8 text-sm text-foreground-800">{t('country.note')}</p>
 
       <section className="mt-12" aria-labelledby="how-it-works">
         <h2 id="how-it-works" className="text-2xl font-semibold">
-          How we handle it
+          {t('country.process')}
         </h2>
         <ol className="mt-6 list-decimal space-y-2 pl-6 leading-relaxed text-foreground-800">
-          {country.process.map((s) => (
+          {text.process.map((s) => (
             <li key={s}>{s}</li>
           ))}
         </ol>
@@ -91,8 +92,8 @@ export default function CountryPage() {
 
       <section id="quote" className="mt-14 border-t border-background-300 pt-10">
         <QuoteForm
-          defaultMarket={country.name}
-          title={`Selling in ${country.name}? Get a quote`}
+          defaultMarket={text.name}
+          title={t('country.quoteTitle', { name: text.name })}
         />
       </section>
     </PageShell>
