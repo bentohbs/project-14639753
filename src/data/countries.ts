@@ -351,22 +351,3 @@ export function getCountryText(country: Country, lang: string): CountryText {
 export function findCountry(slug: string | undefined): Country | undefined {
   return countries.find((c) => c.slug === slug);
 }
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Claude finished the response
