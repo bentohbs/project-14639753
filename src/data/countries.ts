@@ -1,5 +1,3 @@
-
-Countries · TS
 // One entry per country page. To add a country, copy the Mexico block,
 // change the text, and save. The page at /countries/<slug> appears automatically.
 //
