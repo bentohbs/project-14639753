@@ -2,7 +2,7 @@ const home: Record<string, string> = {
   // Hero
   'hero.eyebrow': 'Type Approval · Regulatory Compliance',
   'hero.title': 'Your trusted partner for global market access',
-  'hero.intro': 'Gaudi Enterprises helps manufacturers, test laboratories and third-party agencies certify products in 180+ countries — faster, trackable and worry-free.',
+  'hero.intro': 'Gaudi Enterprises helps manufacturers, test laboratories, government entities and third-party agencies certify products in 180+ countries — faster, trackable and worry-free.',
   'hero.cta1': 'Start Onboarding',
   'hero.cta2': 'Explore Our Services',
   'stats.0.label': 'Years of expertise',
