@@ -2,7 +2,7 @@ const home: Record<string, string> = {
   // Hero
   'hero.eyebrow': '型式批准 · 法规合规',
   'hero.title': '您值得信赖的全球市场准入合作伙伴',
-  'hero.intro': 'Gaudi Enterprises 协助制造商、测试实验室和第三方机构在 180 多个国家完成产品认证——更快速、全程可追踪、省心无忧。',
+  'hero.intro': 'Gaudi Enterprises 协助制造商、测试实验室、政府单位和第三方机构在 180 多个国家完成产品认证——更快速、全程可追踪、省心无忧。',
   'hero.cta1': '开始合作',
   'hero.cta2': '了解我们的服务',
   'stats.0.label': '年行业经验',
