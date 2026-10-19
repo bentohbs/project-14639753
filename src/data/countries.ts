@@ -1,17 +1,19 @@
+
+Countries · TS
 // One entry per country page. To add a country, copy the Mexico block,
 // change the text, and save. The page at /countries/<slug> appears automatically.
 //
 // IMPORTANT: keep status as 'draft' until a local partner has confirmed the
 // content is current. Set status to 'verified' and fill in lastVerified
 // (format YYYY-MM-DD) and the page will show "Last verified on ...".
-
+ 
 export type CountryStatus = 'draft' | 'verified';
-
+ 
 export interface KeyPoint {
   title: string;
   body: string;
 }
-
+ 
 export interface Country {
   slug: string; // used in the web address, e.g. "mexico" -> /countries/mexico
   name: string;
@@ -28,7 +30,7 @@ export interface Country {
   partnerUrl?: string; // optional: link for the partner name
   zh?: Partial<CountryText>; // Simplified Chinese version of the text fields
 }
-
+ 
 // The text fields that are translated. Anything missing in "zh" falls back to English.
 export interface CountryText {
   name: string;
@@ -40,7 +42,7 @@ export interface CountryText {
   keyPoints: KeyPoint[];
   process: string[];
 }
-
+ 
 export const countries: Country[] = [
   {
     slug: 'mexico',
@@ -71,7 +73,7 @@ export const countries: Country[] = [
       },
       {
         title: 'Electrical safety (NOM)',
-        body: 'Electrical products need NOM safety certification from an accredited Mexican certification body, with sample testing in Mexico. The standard that applies depends on the product, for example NOM-001-SCFI or NOM-019-SCFI. NOM certificates generally need renewing after 12 months.',
+        body: 'Electrical products need NOM safety certification from an accredited Mexican certification body, with sample testing in Mexico. The standard that applies depends on the product, for example NOM-001-SCFI or NOM-019-SCFI. NOM certificates are valid for a set period, from one to three years depending on the product category, and need renewing.',
       },
       {
         title: 'Validity and follow-up',
@@ -112,7 +114,7 @@ export const countries: Country[] = [
         },
         {
           "title": "电气安全（NOM）",
-          "body": "电气产品须通过墨西哥认可认证机构的 NOM 安全认证，并在墨西哥进行样品测试。适用的标准因产品而异，例如 NOM-001-SCFI 或 NOM-019-SCFI。NOM 证书通常需在 12 个月后续期。"
+          "body": "电气产品须通过墨西哥认可认证机构的 NOM 安全认证，并在墨西哥进行样品测试。适用的标准因产品而异，例如 NOM-001-SCFI 或 NOM-019-SCFI。NOM 证书有固定有效期，按产品类别为一至三年，到期须续期。"
         },
         {
           "title": "有效期与后续要求",
@@ -130,8 +132,9 @@ export const countries: Country[] = [
     },
     status: 'verified',
     lastVerified: '2026-10-14',
+    partnerName: 'SEATSA',
   },
-
+ 
   {
     slug: 'brazil',
     name: 'Brazil',
@@ -231,7 +234,7 @@ export const countries: Country[] = [
     partnerName: 'Bracert',
     partnerUrl: 'https://www.bracert.com.br/',
   },
-
+ 
   {
     slug: 'south-africa',
     name: 'South Africa',
@@ -329,10 +332,10 @@ export const countries: Country[] = [
     status: 'verified',
     lastVerified: '2026-10-14',
   },
-
+ 
   // To add another country, copy a block above and edit it.
 ];
-
+ 
 export function getCountryText(country: Country, lang: string): CountryText {
   const zh = lang && lang.startsWith('zh') ? country.zh : undefined;
   return {
@@ -346,7 +349,26 @@ export function getCountryText(country: Country, lang: string): CountryText {
     process: zh?.process ?? country.process,
   };
 }
-
+ 
 export function findCountry(slug: string | undefined): Country | undefined {
   return countries.find((c) => c.slug === slug);
 }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Claude finished the response
