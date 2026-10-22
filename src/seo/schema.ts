@@ -14,7 +14,7 @@ export function getSchemaForPath(pathname: string): JsonLdNode[] {
       logo: DEFAULT_OG_IMAGE,
       image: DEFAULT_OG_IMAGE,
       description:
-        'GaudiEnt provides global type approval, regulatory compliance and product certification services for manufacturers, test labs and agencies.',
+        'GaudiEnt provides global type approval, homologation, regulatory compliance and product certification services for manufacturers, test labs and agencies.',
       areaServed: 'Worldwide',
     };
 

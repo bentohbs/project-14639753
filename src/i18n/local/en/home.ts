@@ -1,8 +1,8 @@
 const home: Record<string, string> = {
   // Hero
-  'hero.eyebrow': 'Type Approval · Regulatory Compliance',
+  'hero.eyebrow': 'Type Approval · Homologation · Regulatory Compliance',
   'hero.title': 'Your trusted partner for global market access',
-  'hero.intro': 'Gaudi Enterprises helps manufacturers, test laboratories, government entities and third-party agencies certify products in 180+ countries — faster, trackable and worry-free.',
+  'hero.intro': 'Helping manufacturers, testing laboratories, government entities, and third-party organizations complete product certification in over 180 countries — faster, with full traceability, and completely hassle-free.',
   'hero.cta1': 'Start Onboarding',
   'hero.cta2': 'Explore Our Services',
   'stats.0.label': 'Years of expertise',
@@ -14,7 +14,7 @@ const home: Record<string, string> = {
   'about.eyebrow': 'Who we are',
   'about.title': 'About Gaudi Enterprises Global Compliance',
   'about.p1': 'In Brazil, Bracert Certifcacoes is an authorized commercial agent for Bracert Certificate — a <strong>Designated Certification Body (OCD)</strong> authorized by ANATEL and a <strong>Product Certification Body (OCP)</strong> accredited by INMETRO.',
-  'about.p2': 'Gaudi Enterprises offers global <strong>type approval</strong> and <strong>regulatory compliance</strong> services to manufacturers, test laboratories, and third-party agencies across the world. We are also the commercial agent for Mexico NOM OCP via SEATSA and Brazil OCD Anatel and Inmetro via Bracert Certificaçãos.',
+  'about.p2': 'Gaudi Enterprises offers global <strong>type approval</strong>, <strong>homologation</strong> and <strong>regulatory compliance</strong> services to manufacturers, test laboratories, and third-party agencies across the world. We are also the commercial agent for Mexico NOM OCP via SEATSA and Brazil OCD Anatel and Inmetro via Bracert Certificaçãos.',
   'about.p3': 'Our team of regulatory experts brings more than 20 years of experience in international certification of communication products — across consumer electronics, household appliances, enterprise terminals, industrial logistics, automotive, IoT and marine.',
   'about.points.0': 'Consulting and proposals on GMA strategy pre-approvals',
   'about.points.1': 'Efficient, smooth project execution during approvals',
@@ -39,8 +39,8 @@ const home: Record<string, string> = {
   // Services
   'services.eyebrow': 'What we do',
   'services.title': 'Comprehensive Compliance Services',
-  'services.0.title': 'Type Approval',
-  'services.0.desc': 'End-to-end management of national type approvals for radio, telecom and EMC products in 180+ markets.',
+  'services.0.title': 'Type Approval and Homologation',
+  'services.0.desc': 'End-to-end management of national type approvals and homologation for radio, telecom and EMC products in 180+ markets.',
   'services.1.title': 'Product Certification and Regulatory Consulting',
   'services.1.desc': 'GMA strategy pre-approval proposals, gap analysis and certification roadmaps tailored to your launch plan.',
   'services.2.title': 'Certificate Maintenance',
@@ -94,7 +94,8 @@ const home: Record<string, string> = {
   'contact.3.label': 'WeChat',
   'footer.address': 'Registered Address',
   'footer.directions': 'Get Directions',
+  'footer.phone': 'Tel / WhatsApp',
   'footer.copy': '© 2026 GaudiEnt Global Compliance. All rights reserved.',
-  'footer.tagline': 'Type Approval · Regulatory Compliance · Certification',
+  'footer.tagline': 'Type Approval · Homologation · Regulatory Compliance · Certification',
 };
 export default home;

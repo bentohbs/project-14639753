@@ -1,8 +1,8 @@
 const home: Record<string, string> = {
   // Hero
-  'hero.eyebrow': '型式批准 · 法规合规',
+  'hero.eyebrow': '型式批准 · Homologation · 法规合规',
   'hero.title': '您值得信赖的全球市场准入合作伙伴',
-  'hero.intro': 'Gaudi Enterprises 协助制造商、测试实验室、政府单位和第三方机构在 180 多个国家完成产品认证——更快速、全程可追踪、省心无忧。',
+  'hero.intro': '协助制造商、测试实验室、政府单位和第三方机构在180多个国家完成产品认证——更快速、全程可追踪、省心无忧。',
   'hero.cta1': '开始合作',
   'hero.cta2': '了解我们的服务',
   'stats.0.label': '年行业经验',
@@ -14,7 +14,7 @@ const home: Record<string, string> = {
   'about.eyebrow': '关于我们',
   'about.title': '关于 Gaudi Enterprises 全球合规',
   'about.p1': '在巴西，Bracert Certificações 是 Bracert 认证机构的授权商务代理。该机构是经 ANATEL 授权的<strong>指定认证机构（OCD）</strong>，同时也是经 INMETRO 认可的<strong>产品认证机构（OCP）</strong>。',
-  'about.p2': 'Gaudi Enterprises 为全球的制造商、测试实验室和第三方机构提供<strong>型式批准</strong>和<strong>法规合规</strong>服务。我们同时是墨西哥 NOM 产品认证机构（OCP）SEATSA，以及巴西 ANATEL（OCD）和 INMETRO 认证机构 Bracert Certificações 的商务代理。',
+  'about.p2': 'Gaudi Enterprises 为全球的制造商、测试实验室和第三方机构提供<strong>型式批准</strong>、<strong>认证（Homologation）</strong>和<strong>法规合规</strong>服务。我们同时是墨西哥 NOM 产品认证机构（OCP）SEATSA，以及巴西 ANATEL（OCD）和 INMETRO 认证机构 Bracert Certificações 的商务代理。',
   'about.p3': '我们的法规专家团队在通信产品国际认证领域拥有 20 多年经验，涵盖消费电子、家用电器、企业终端、工业物流、汽车、物联网和海事等行业。',
   'about.points.0': '全球市场准入（GMA）策略与预审方案咨询',
   'about.points.1': '审批过程中高效顺畅的项目执行',
@@ -39,8 +39,8 @@ const home: Record<string, string> = {
   // Services
   'services.eyebrow': '我们的服务',
   'services.title': '全方位合规服务',
-  'services.0.title': '型式批准',
-  'services.0.desc': '为 180 多个市场的无线电、电信和 EMC 产品提供各国型式批准的全流程管理。',
+  'services.0.title': '型式批准与认证（Homologation）',
+  'services.0.desc': '为 180 多个市场的无线电、电信和 EMC 产品提供各国型式批准与认证（Homologation）的全流程管理。',
   'services.1.title': '产品认证与法规咨询',
   'services.1.desc': '针对您的上市计划，提供 GMA 策略预审方案、差距分析和认证路线图。',
   'services.2.title': '证书维护',
@@ -94,7 +94,8 @@ const home: Record<string, string> = {
   'contact.3.label': '微信',
   'footer.address': '注册地址',
   'footer.directions': '获取路线',
+  'footer.phone': '电话 / WhatsApp',
   'footer.copy': '© 2026 GaudiEnt 全球合规。保留所有权利。',
-  'footer.tagline': '型式批准 · 法规合规 · 认证',
+  'footer.tagline': '型式批准 · Homologation · 法规合规 · 产品认证',
 };
 export default home;

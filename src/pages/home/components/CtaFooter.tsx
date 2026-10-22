@@ -36,7 +36,7 @@ export default function CtaFooter() {
             ),
           )}
         </div>
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 flex flex-col items-center">
           <a href={registeredAddress.url} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center text-center cursor-pointer rounded-lg p-4 transition-colors hover:bg-background-50">
             <span className="w-14 h-14 flex items-center justify-center rounded-full bg-background-50 text-primary-500 transition-colors group-hover:bg-primary-500 group-hover:text-background-50"><i className="ri-map-pin-2-line text-2xl" /></span>
             <p className="text-xs text-foreground-600 mt-3">{t('footer.address')}</p>
@@ -48,6 +48,11 @@ export default function CtaFooter() {
             <span className="mt-3 inline-flex items-center gap-1.5 text-xs text-primary-600 font-medium group-hover:text-primary-700 transition-colors">
               <i className="ri-map-pin-line" /> {t('footer.directions')}
             </span>
+          </a>
+          <a href={registeredAddress.phoneHref} className="mt-1 inline-flex items-center gap-2 text-sm text-foreground-950 font-medium hover:text-primary-600 transition-colors">
+            <i className="ri-phone-line text-primary-500" />
+            <span className="text-xs text-foreground-600">{t('footer.phone')}</span>
+            {registeredAddress.phone}
           </a>
         </div>
         <div className="mt-12 pt-5 border-t border-primary-200 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-foreground-600">
