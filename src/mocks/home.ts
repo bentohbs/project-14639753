@@ -69,5 +69,7 @@ export const contacts = [
 export const registeredAddress = {
   label: 'Registered Address',
   lines: ['101 Upper Cross Street', '#01-34 Peoples Park Centre', 'Singapore 058357'],
+  phone: '+65 96804897',
+  phoneHref: 'tel:+6596804897',
   url: 'https://www.google.com/maps/search/?api=1&query=101%20Upper%20Cross%20Street%20%2301-34%20Peoples%20Park%20Centre%20Singapore%20058357',
 };

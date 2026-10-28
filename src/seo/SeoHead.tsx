@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { resolveSeo } from './config';
 import { SITE_NAME, DEFAULT_OG_IMAGE, absoluteUrl } from './site';
 
@@ -41,6 +42,8 @@ function setCanonical(href?: string) {
 
 export default function SeoHead() {
   const { pathname } = useLocation();
+  const { i18n } = useTranslation();
+  const lang = i18n.language;
 
   useEffect(() => {
     const seo = resolveSeo(pathname);
@@ -65,22 +68,26 @@ export default function SeoHead() {
       return;
     }
 
-    document.title = seo.title;
-    setMeta('name', 'description', seo.description);
+    const zh = lang && lang.startsWith('zh') ? seo.zh : undefined;
+    const title = zh?.title ?? seo.title;
+    const description = zh?.description ?? seo.description;
+
+    document.title = title;
+    setMeta('name', 'description', description);
     setMeta('name', 'keywords', seo.keywords);
     setMeta('name', 'robots', seo.indexable ? 'index, follow' : 'noindex, nofollow');
-    setMeta('property', 'og:title', seo.title);
-    setMeta('property', 'og:description', seo.description);
+    setMeta('property', 'og:title', title);
+    setMeta('property', 'og:description', description);
     setMeta('property', 'og:type', seo.ogType || 'website');
     setMeta('property', 'og:url', canonical);
     setMeta('property', 'og:image', DEFAULT_OG_IMAGE);
     setMeta('property', 'og:site_name', SITE_NAME);
     setMeta('name', 'twitter:card', 'summary_large_image');
-    setMeta('name', 'twitter:title', seo.title);
-    setMeta('name', 'twitter:description', seo.description);
+    setMeta('name', 'twitter:title', title);
+    setMeta('name', 'twitter:description', description);
     setMeta('name', 'twitter:image', DEFAULT_OG_IMAGE);
     setCanonical(canonical);
-  }, [pathname]);
+  }, [pathname, lang]);
 
   return null;
 }
