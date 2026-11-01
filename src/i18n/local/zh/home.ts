@@ -27,7 +27,7 @@ const home: Record<string, string> = {
   // Certification
   'cert.eyebrow': '为什么选择我们',
   'cert.title': 'Gaudi Enterprises 是谁',
-  'cert.intro': '我们是经 ANATEL 授权的指定认证机构（OCD），也是经 INMETRO 认可的产品认证机构（OCP）。我们的职责是评估您的产品和公司是否符合现行法规，并在产品符合监管机构规定的全部标准和要求后，签发技术符合性证书。',
+  'cert.intro': '在巴西，该机构是经 ANATEL 授权的指定认证机构（OCD），同时也是经 INMETRO 认可的产品认证机构（OCP）。我们Gaudi是Bracert Certificações认证机构在中国的授权商务代理。',
   'cert.heading': '巴西产品认证的两大支柱',
   'cert.pillar.0.role': '指定认证机构（OCD）',
   'cert.pillar.0.points.0': '经 ANATEL 授权，评估须强制认证的电信产品。',
