@@ -32,16 +32,16 @@ const countrySeo: Record<string, RouteSeo> = Object.fromEntries(
 
 export const ROUTE_SEO: Record<string, RouteSeo> = {
   '/': {
-    title: 'GaudiEnt Global Type Approval, Homologation & Regulatory Compliance',
+    title: 'GaudiEnt | Global Market Access (GMA), Type Approval & Homologation',
     description:
-      'GaudiEnt delivers global type approval, homologation, regulatory compliance and product certification services in 180+ countries for manufacturers, labs and agencies.',
-    keywords: 'type approval, homologation, regulatory compliance, product certification, GMA, market access',
+      'GaudiEnt delivers global market access (GMA), type approval, homologation, regulatory compliance and product certification services in 180+ countries for manufacturers, labs and agencies.',
+    keywords: 'global market access, GMA, type approval, homologation, regulatory compliance, product certification',
     indexable: true,
     sitemapInclude: true,
     ogType: 'website',
     zh: {
-      title: 'GaudiEnt 全球型式批准、Homologation 与法规合规',
-      description: 'GaudiEnt 为制造商、实验室和机构提供覆盖 180 多个国家的全球型式批准、Homologation、法规合规和产品认证服务。',
+      title: 'GaudiEnt | 全球市场准入（GMA）、型式批准与 Homologation',
+      description: 'GaudiEnt 为制造商、实验室和机构提供覆盖 180 多个国家的全球市场准入（GMA）、型式批准、Homologation、法规合规和产品认证服务。',
     },
   },
   '/countries': {

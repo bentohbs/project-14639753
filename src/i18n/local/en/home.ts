@@ -1,7 +1,7 @@
 const home: Record<string, string> = {
   // Hero
   'hero.eyebrow': 'Type Approval · Homologation · Regulatory Compliance',
-  'hero.title': 'Your trusted partner for global market access',
+  'hero.title': 'Your trusted partner for global market access (GMA)',
   'hero.intro': 'Helping manufacturers, testing laboratories, government entities, and third-party organizations complete product certification in over 180 countries — faster, with full traceability, and completely hassle-free.',
   'hero.cta1': 'Start Onboarding',
   'hero.cta2': 'Explore Our Services',
@@ -16,7 +16,7 @@ const home: Record<string, string> = {
   'about.p1': 'In Brazil, Bracert Certifcacoes is an authorized commercial agent for Bracert Certificate — a <strong>Designated Certification Body (OCD)</strong> authorized by ANATEL and a <strong>Product Certification Body (OCP)</strong> accredited by INMETRO.',
   'about.p2': 'Gaudi Enterprises offers global <strong>type approval</strong>, <strong>homologation</strong> and <strong>regulatory compliance</strong> services to manufacturers, test laboratories, and third-party agencies across the world. We are also the commercial agent for Mexico NOM OCP via SEATSA and Brazil OCD Anatel and Inmetro via Bracert Certificaçãos.',
   'about.p3': 'Our team of regulatory experts brings more than 20 years of experience in international certification of communication products — across consumer electronics, household appliances, enterprise terminals, industrial logistics, automotive, IoT and marine.',
-  'about.points.0': 'Consulting and proposals on GMA strategy pre-approvals',
+  'about.points.0': 'Consulting and proposals on Global Market Access (GMA) strategy and pre-approvals',
   'about.points.1': 'Efficient, smooth project execution during approvals',
   'about.points.2': 'Certificate validity tracking and renewal alerts',
   'about.points.3': 'Monitoring global regulatory updates and product impact',
@@ -27,7 +27,7 @@ const home: Record<string, string> = {
   // Certification
   'cert.eyebrow': 'Why choose us',
   'cert.title': 'Who is Gaudi Enterprises',
-  'cert.intro': 'We are a Designated Certification Body (OCD) authorized by ANATEL and also a Product Certification Body (OCP) accredited by INMETRO. Our role is to assess whether your product and your company meet current regulations, and to issue a Certificate of Technical Conformity once your product complies with all standards and requirements established by regulatory agencies.',
+  'cert.intro': 'We are the sole commercial agent for Bracert Certificações in China. In Brazil, Bracert Certificações is a Designated Certification Body (OCD) authorized by ANATEL and a Product Certification Body (OCP) accredited by INMETRO. Bracert assesses whether your product and company meet current regulations, and issues the Certificate of Technical Conformity once your product complies with all standards and requirements set by regulatory agencies.',
   'cert.heading': 'The two pillars of product certification in Brazil',
   'cert.pillar.0.role': 'Designated Certification Body (OCD)',
   'cert.pillar.0.points.0': 'Authorized by ANATEL to assess telecommunications products under mandatory certification.',
@@ -42,7 +42,7 @@ const home: Record<string, string> = {
   'services.0.title': 'Type Approval and Homologation',
   'services.0.desc': 'End-to-end management of national type approvals and homologation for radio, telecom and EMC products in 180+ markets.',
   'services.1.title': 'Product Certification and Regulatory Consulting',
-  'services.1.desc': 'GMA strategy pre-approval proposals, gap analysis and certification roadmaps tailored to your launch plan.',
+  'services.1.desc': 'Global Market Access (GMA) strategy and pre-approval proposals, gap analysis and certification roadmaps tailored to your launch plan.',
   'services.2.title': 'Certificate Maintenance',
   'services.2.desc': 'Validity tracking, renewal reminders and change notifications so certificates never lapse.',
   'services.3.title': 'Regulatory Monitoring',

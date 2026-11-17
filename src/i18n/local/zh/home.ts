@@ -1,7 +1,7 @@
 const home: Record<string, string> = {
   // Hero
   'hero.eyebrow': '型式批准 · Homologation · 法规合规',
-  'hero.title': '您值得信赖的全球市场准入合作伙伴',
+  'hero.title': '您值得信赖的全球市场准入（GMA）合作伙伴',
   'hero.intro': '协助制造商、测试实验室、政府单位和第三方机构在180多个国家完成产品认证——更快速、全程可追踪、省心无忧。',
   'hero.cta1': '开始合作',
   'hero.cta2': '了解我们的服务',
@@ -27,7 +27,7 @@ const home: Record<string, string> = {
   // Certification
   'cert.eyebrow': '为什么选择我们',
   'cert.title': 'Gaudi Enterprises 是谁',
-  'cert.intro': '在巴西，该机构是经 ANATEL 授权的指定认证机构（OCD），同时也是经 INMETRO 认可的产品认证机构（OCP）。我们Gaudi是Bracert Certificações认证机构在中国的授权商务代理。',
+  'cert.intro': '我们是 Bracert Certificações 在中国的独家商务代理。在巴西，Bracert Certificações 是经 ANATEL 授权的指定认证机构（OCD），同时也是经 INMETRO 认可的产品认证机构（OCP）。Bracert 负责评估您的产品和公司是否符合现行法规，并在产品符合监管机构规定的全部标准和要求后，签发技术符合性证书。',
   'cert.heading': '巴西产品认证的两大支柱',
   'cert.pillar.0.role': '指定认证机构（OCD）',
   'cert.pillar.0.points.0': '经 ANATEL 授权，评估须强制认证的电信产品。',
@@ -42,7 +42,7 @@ const home: Record<string, string> = {
   'services.0.title': '型式批准与认证（Homologation）',
   'services.0.desc': '为 180 多个市场的无线电、电信和 EMC 产品提供各国型式批准与认证（Homologation）的全流程管理。',
   'services.1.title': '产品认证与法规咨询',
-  'services.1.desc': '针对您的上市计划，提供 GMA 策略预审方案、差距分析和认证路线图。',
+  'services.1.desc': '针对您的上市计划，提供全球市场准入（GMA）策略与预审方案、差距分析和认证路线图。',
   'services.2.title': '证书维护',
   'services.2.desc': '有效期跟踪、续期提醒和变更通知，确保证书不会失效。',
   'services.3.title': '法规监测',
